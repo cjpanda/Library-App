@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Library App</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-background">
+    <div>
+      <header class="text-5xl font-bold bg-[#020617] p-5 text-center">
+        <h1 class="text-white">My Library</h1>
+      </header>
+      <div class="flex items-center justify-center">
+        <button
+          class="flex items-center text-2xl font-semibold gap-5 p-3 px-5 mt-5 mb-10 rounded-lg bg-[#fef3c7]"
+        >
+          Add Book
+          <img src="./icon-add.png" width="50" height="50" id="add" />
+        </button>
+      </div>
+
+      <form id="book-form">
+        <div
+          class="flex flex-col items-center lg:mt-20 mt-10 p-5"
+          id="form-container"
+        >
+          <div class="">
+            <label for="title" class="text-lg font-bold pr-8">Title:</label>
+            <input
+              required
+              type="text"
+              placeholder="Book Title"
+              id="title"
+              class="mb-5 p-2 outline-none text-md rounded-lg bg-[#fef3c7]"
+            />
+          </div>
+
+          <div>
+            <label for="author" class="text-lg font-bold pr-3">Author:</label>
+            <input
+              required
+              type="text"
+              placeholder="Book Author"
+              id="author"
+              class="mb-5 p-2 outline-none text-md rounded-lg bg-[#fef3c7]"
+            />
+          </div>
+
+          <div>
+            <label for="pages" class="text-lg font-bold pr-3">Pages:</label>
+            <input
+              required
+              type="number"
+              placeholder="Pages Count"
+              id="pages"
+              class="mb-5 p-2 outline-none text-md rounded-lg bg-[#fef3c7]"
+            />
+          </div>
+
+          <div class="flex items-center gap-3 mb-5">
+            <label for="read" class="text-lg font-bold"
+              >Have you read it?</label
+            >
+            <input type="checkbox" id="checkbox" class="w-5 h-5" />
+          </div>
+          <button
+            type="submit"
+            class="bg-[#020617] text-white py-4 rounded-xl tracking-wider mt-3 w-full"
+          >
+            Add Book
+          </button>
+        </div>
+      </form>
+
+      <div id="books-display" class="p-5 gap-10 lg:flex"></div>
+    </div>
+
+    <div id="overlay"></div>
+
+    <script src="script.js" async defer></script>
+  </body>
+</html>
